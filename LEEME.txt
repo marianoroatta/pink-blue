@@ -1,0 +1,27 @@
+PINK&BLUE — PAQUETE PWA PARA ANDROID
+
+CONTENIDO
+- index.html: aplicación Pink&Blue.
+- manifest.webmanifest: nombre, colores e iconos de instalación.
+- service-worker.js: caché básica para abrir la app sin conexión después de la primera visita.
+- icons/: iconos generados a partir del logo integrado en la aplicación.
+- .github/workflows/pages.yml: publicación automática en GitHub Pages.
+- .nojekyll: evita el procesamiento Jekyll de GitHub Pages.
+
+PUBLICACIÓN
+1. Crear un repositorio nuevo en GitHub, preferentemente privado si el plan permite Pages con repositorios privados; de lo contrario, usar público (los archivos de la app no contienen credenciales).
+2. Subir el CONTENIDO de esta carpeta a la raíz del repositorio y confirmar en la rama main.
+3. En GitHub: Settings > Pages > Build and deployment > Source: GitHub Actions.
+4. Esperar a que finalice el flujo “Publicar Pink&Blue en GitHub Pages”. La URL quedará en Settings > Pages y en el resultado del flujo.
+
+INSTALACIÓN EN ANDROID
+1. Abrir la URL HTTPS publicada en Chrome.
+2. Esperar a que cargue.
+3. Menú ⋮ > “Instalar aplicación” o “Agregar a pantalla principal”.
+4. Confirmar. Aparecerá Pink&Blue con su logo.
+
+IMPORTANTE
+- La primera apertura necesita conexión a internet.
+- La caché permite recuperar la pantalla principal luego de una primera carga correcta; algunas funciones que dependen de servicios externos (por ejemplo, la librería Excel) pueden requerir conexión.
+- Los datos de clientes, ventas y pagos se guardan localmente en ese dispositivo/navegador. Esta PWA no sincroniza automáticamente con otros teléfonos y no reemplaza una copia de seguridad.
+- No cambies la URL/ruta una vez instalada, para conservar el origen de los datos locales.
